@@ -1,3 +1,5 @@
+package mysys.tool;
+
 import mysys.tool.toolMain;
 import org.junit.Assert;
 import org.junit.Before;

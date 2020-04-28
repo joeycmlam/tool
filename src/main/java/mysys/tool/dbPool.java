@@ -1,8 +1,6 @@
 package mysys.tool;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class dbPool {
 
@@ -34,5 +32,24 @@ public class dbPool {
 
             return isConnected;
         }
+    }
+
+    public ResultSet getTxn() {
+
+        int intCount = 0;
+        String sql = "select * from txn;";
+
+        try {
+
+            Statement stmt = this.conn.createStatement();
+            final ResultSet rs = stmt.executeQuery(sql);
+
+            return rs;
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            return null;
+        }
+
     }
 }
