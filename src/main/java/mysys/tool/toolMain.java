@@ -1,3 +1,5 @@
+package mysys.tool;
+
 import java.util.Arrays;
 
 public class toolMain {
